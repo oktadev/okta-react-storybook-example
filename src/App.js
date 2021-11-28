@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { Link } from 'react-router-dom';
+import { Header } from './stories/Header';
 
-function App() {
+export const App = ({useAuth}) => {
+  const [user, login, logout] = useAuth();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header user={user} onLogin={login} onLogout={logout} />
+      <h1>Unit Converter</h1>
+      <p>
+      <Link to="/converter">Go to the app!</Link>
+      </p>
     </div>
   );
 }
-
-export default App;
