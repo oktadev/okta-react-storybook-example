@@ -1,22 +1,33 @@
 import React from 'react';
-
 import { Page } from './Page';
-import * as HeaderStories from './Header.stories';
 
 export default {
-  title: 'Example/Page',
+  title: 'Pages/Page',
   component: Page,
 };
 
-const Template = (args) => <Page {...args} />;
+const mockUseAuth = (loggedIn) => () => [
+  loggedIn ? {given_name: "Username"} : undefined, 
+  () => {}, 
+  () => {}
+];
+
+const Template = (args) => <Page useAuth={mockUseAuth(true)} {...args}/>;
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
-  // More on composing args: https://storybook.js.org/docs/react/writing-stories/args#args-composition
-  ...HeaderStories.LoggedIn.args,
+  useAuth: mockUseAuth(true),
+};
+
+LoggedIn.parameters = {
+  controls: { hideNoControlsWarning: true },
 };
 
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {
-  ...HeaderStories.LoggedOut.args,
+  useAuth: mockUseAuth(false),
+};
+
+LoggedOut.parameters = {
+  controls: { hideNoControlsWarning: true },
 };
