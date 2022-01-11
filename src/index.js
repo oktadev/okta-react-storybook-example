@@ -10,8 +10,8 @@ import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
 import { useAuth } from './auth';
 
 const oktaAuth = new OktaAuth({
-  issuer: 'https://dev-20943582.okta.com/oauth2/default',
-  clientId: '0oa2pqe5iik6wUL285d7',
+  issuer: 'https://{yourOktaDomain}/oauth2/default',
+  clientId: '{clientId}',
   redirectUri: `/callback`,
 });
 
