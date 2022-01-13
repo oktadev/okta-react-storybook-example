@@ -42,7 +42,7 @@ Issuer:    https://{yourOktaDomain}/oauth2/default
 Client ID: {clientId}
 ```
 
-**NOTE:** You can also use the Okta Admin Console to create your app. See [Create an Angular App](https://developer.okta.com/docs/guides/sign-into-spa/angular/create-okta-application/) for more information.
+**NOTE:** You can also use the Okta Admin Console to create your app. See [Create a React App](https://developer.okta.com/docs/guides/sign-into-spa/react/create-okta-application/) for more information.
 
 ### Configure your Okta Settings
 
