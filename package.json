@@ -55,9 +55,11 @@
     "@storybook/addon-actions": "^6.4.10",
     "@storybook/addon-essentials": "^6.4.10",
     "@storybook/addon-links": "^6.4.10",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/node-logger": "^6.4.10",
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.10",
-    "webpack": "^5.65.0"
+    "webpack": "^5.74.0"
   }
 }
